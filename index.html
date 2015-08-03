@@ -168,11 +168,11 @@
 		},
 		style: function(feature) {
 		    switch (feature.properties.District) {
-		        case 'Granger-Hunter': return {color: "#000000", fillColor: "red"};
-		        case 'Taylorsville-Bennion': return {color: "#000000", fillColor: "blue"};
-		        case 'Kearns': return {color: "#000000", fillColor: "purple"};
-		        case 'Magna': return {color: "#000000", fillColor: "green"};
-		        case 'Alliant': return {color: "#000000", fillColor: "orange"};
+		        case 'Granger-Hunter': return {color: "#000000", opacity: 1.0, fillColor: "red", fillOpacity: 0.4};
+		        case 'Taylorsville-Bennion': return {color: "#000000", opacity: 1.0, fillColor: "blue", fillOpacity: 0.4};
+		        case 'Kearns': return {color: "#000000", opacity: 1.0, fillColor: "purple", fillOpacity: 0.4};
+		        case 'Magna': return {color: "#000000", opacity: 1.0, fillColor: "green", fillOpacity: 0.4};
+		        case 'Alliant': return {color: "#000000", opacity: 1.0, fillColor: "orange", fillOpacity: 0.4};
 		    }
 		}
 	}).addTo(map);
