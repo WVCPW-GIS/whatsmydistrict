@@ -148,7 +148,7 @@
 	      // ... initialize other DOM elements, add listeners, etc.
 	      	return imageLink;
     	}
-	})
+	});
 		
 
 	var states = L.geoJson(districts, {
@@ -187,6 +187,8 @@
 			mapId: 'wvcpw.433b443c',
 			token: 'pk.eyJ1Ijoid3ZjcHciLCJhIjoiNWE4MTVjMjFhZDZlZDY1ZGY4Y2YzNWUzOGRlZmIzOWQifQ.gKCcFkSs7nv03yiyqqBrcg',
 			maxZoom: 18,
+			minZoom: 13,
+			detectRetina: true,
 			attribution: '<a href="https://www.mapbox.com/about/maps/">Mapbox &copy; OpenStreetMap &copy</a>'
 		}).addTo(map);
 		
@@ -198,7 +200,7 @@
 			var radius = e.accuracy / 2;
 
 			var layer = leafletPip.pointInLayer(e.latlng, states, true);
-			if (layer.length == 0) {
+			if (layer.length === 0) {
 				L.marker(e.latlng).addTo(map)
 				.bindPopup("You are not within a district.").openPopup();
 			}
